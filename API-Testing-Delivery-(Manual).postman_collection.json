@@ -1,0 +1,842 @@
+{
+  "info": {
+    "_postman_id": "3ef624fa-4238-48b2-99f1-0757b9cf2fc8",
+    "name": "ЯП. Спринт 07. Тестирование API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "39363661"
+  },
+  "item": [
+    {
+      "name": "POST Проверка доставки и стоимости",
+      "item": [
+        {
+          "name": "200 Проверка значения productsCount (первый диапазон)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<InputModel>\r\n    <productsCount>7</productsCount>\r\n    <productsWeight>1.5</productsWeight>\r\n    <deliveryTime>17</deliveryTime>\r\n</InputModel>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/fast-delivery/v3.1.1/calculate-delivery.xml",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "fast-delivery",
+                "v3.1.1",
+                "calculate-delivery.xml"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "200 Проверка значения productsCount (второй диапазон)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<InputModel>\r\n    <productsCount>14</productsCount>\r\n    <productsWeight>4</productsWeight>\r\n    <deliveryTime>17</deliveryTime>\r\n</InputModel>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/fast-delivery/v3.1.1/calculate-delivery.xml",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "fast-delivery",
+                "v3.1.1",
+                "calculate-delivery.xml"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "200 Проверка значения productsWeight (первый диапазон)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<InputModel>\r\n    <productsCount>4</productsCount>\r\n    <productsWeight>52</productsWeight>\r\n    <deliveryTime>17</deliveryTime>\r\n</InputModel>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/fast-delivery/v3.1.1/calculate-delivery.xml",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "fast-delivery",
+                "v3.1.1",
+                "calculate-delivery.xml"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "200 Проверка значения productsWeight (второй диапазон)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<InputModel>\r\n    <productsCount>11</productsCount>\r\n    <productsWeight>28</productsWeight>\r\n    <deliveryTime>17</deliveryTime>\r\n</InputModel>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/fast-delivery/v3.1.1/calculate-delivery.xml",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "fast-delivery",
+                "v3.1.1",
+                "calculate-delivery.xml"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "200 Проверка параметра deliveryTime",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<InputModel>\r\n    <productsCount>11</productsCount>\r\n    <productsWeight>4</productsWeight>\r\n    <deliveryTime>15</deliveryTime>\r\n</InputModel>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/fast-delivery/v3.1.1/calculate-delivery.xml",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "fast-delivery",
+                "v3.1.1",
+                "calculate-delivery.xml"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "200 Проверка запроса с комментариями",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<InputModel>\r\n    <!--Указать количество товара-->\r\n    <productsCount>11</productsCount>\r\n    <!--Указать вес товара-->\r\n    <productsWeight>4</productsWeight>\r\n    <!--Указать время доставки товара-->\r\n    <deliveryTime>17</deliveryTime>\r\n</InputModel>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/fast-delivery/v3.1.1/calculate-delivery.xml",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "fast-delivery",
+                "v3.1.1",
+                "calculate-delivery.xml"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "200 Проверка с измененным порядком параметров",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<InputModel>\r\n    <deliveryTime>17</deliveryTime>\r\n    <productsWeight>4</productsWeight>\r\n    <productsCount>11</productsCount>\r\n</InputModel>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/fast-delivery/v3.1.1/calculate-delivery.xml",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "fast-delivery",
+                "v3.1.1",
+                "calculate-delivery.xml"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "400 Проверка некорректного значения productsCount",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<InputModel>\r\n    <productsCount></productsCount>\r\n    <productsWeight>1.5</productsWeight>\r\n    <deliveryTime>17</deliveryTime>\r\n</InputModel>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/fast-delivery/v3.1.1/calculate-delivery.xml",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "fast-delivery",
+                "v3.1.1",
+                "calculate-delivery.xml"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "400 Проверка некорректного значения productsWeight",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<InputModel>\r\n    <productsCount>4</productsCount>\r\n    <productsWeight></productsWeight>\r\n    <deliveryTime>17</deliveryTime>\r\n</InputModel>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/fast-delivery/v3.1.1/calculate-delivery.xml",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "fast-delivery",
+                "v3.1.1",
+                "calculate-delivery.xml"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "400 Проверка некорректного значения deliveryTime",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<InputModel>\r\n    <productsCount>4</productsCount>\r\n    <productsWeight>1.5</productsWeight>\r\n    <deliveryTime></deliveryTime>\r\n</InputModel>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/fast-delivery/v3.1.1/calculate-delivery.xml",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "fast-delivery",
+                "v3.1.1",
+                "calculate-delivery.xml"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "400 Проверка с отсутствующими параметрами",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<InputModel>\r\n    <productsWeight></productsWeight>\r\n    <deliveryTime></deliveryTime>\r\n</InputModel>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/fast-delivery/v3.1.1/calculate-delivery.xml",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "fast-delivery",
+                "v3.1.1",
+                "calculate-delivery.xml"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "400 Проверка с задублированными параметрами",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<InputModel>\r\n    <productsCount>11</productsCount>\r\n    <productsCount>11</productsCount>\r\n    <productsWeight>4</productsWeight>\r\n    <productsWeight>4</productsWeight>\r\n    <deliveryTime>17</deliveryTime>\r\n    <deliveryTime>17</deliveryTime>\r\n</InputModel>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/fast-delivery/v3.1.1/calculate-delivery.xml",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "fast-delivery",
+                "v3.1.1",
+                "calculate-delivery.xml"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "400 Проверка с ошибкой в синтаксисе XML",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "<InputModel>\r\n    <productsCount>11</productsCount>\r\n    <productsWeight>4</productsWeight>\r\n    <deliveryTime>17</deliveryTime>\r\n<InputModel>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/fast-delivery/v3.1.1/calculate-delivery.xml",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "fast-delivery",
+                "v3.1.1",
+                "calculate-delivery.xml"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "GET Получение продуктов в корзине",
+      "item": [
+        {
+          "name": "200 Получение продуктов в корзине",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer bc3bdffa-c474-49a0-ab2b-b16adcd0df73",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/api/v1/orders/2",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "400 Получение продуктов в корзине",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer bc3bdffa-c474-49a0-ab2b-b16adcd0df73",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/api/v1/orders/",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "401 Получение продуктов в корзине",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer ",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/api/v1/orders/2",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "404 Получение продуктов в корзине",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer bc3bdffa-c474-49a0-ab2b-b16adcd0df73",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/api/v1/orders/0",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                "0"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "PUT Добавление товаров в корзину",
+      "item": [
+        {
+          "name": "200 Проверка добавления продуктов",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"productsList\": [\r\n        {\r\n            \"id\": 7,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/api/v1/orders/2",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "400 Проверка добавления продуктов",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"productsList\": [\r\n        {\r\n            \"id\": 7,\r\n            \"quantity\": \r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"quantity\": \r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"quantity\": \r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/api/v1/orders/2",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "404 Проверка добавления продуктов",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"productsList\": [\r\n        {\r\n            \"id\": 7,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/api/v1/orders/0",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                "0"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "409 Проверка добавления продуктов",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"productsList\": [\r\n        {\r\n            \"id\": 7,\r\n            \"quantity\": 1500\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"quantity\": 1500\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"quantity\": 1500\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/api/v1/orders/2",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "DELETE Удаление корзины",
+      "item": [
+        {
+          "name": "200 Удаление корзины",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/api/v1/orders/2",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Таблицы БД",
+      "item": [
+        {
+          "name": "Таблица order_model",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/api/db/resources/order_model.csv",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "api",
+                "db",
+                "resources",
+                "order_model.csv"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Таблица kit_model",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/api/db/resources/kit_model.csv",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "api",
+                "db",
+                "resources",
+                "kit_model.csv"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Таблица user_model",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/api/db/resources/user_model.csv",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "api",
+                "db",
+                "resources",
+                "user_model.csv"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Создание пользователя",
+      "item": [
+        {
+          "name": "201 Создание пользователя",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\t\"firstName\": \"Павел\",\r\n\t\"phone\": \"+79995551177\",\r\n\t\"address\": \"г. Москва, ул. Гоголя, д. 125\",\r\n\t\"email\": \"ya1test@ya.ru\",\r\n\t\"comment\": \"Это новый пользователь\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/api/v1/users",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Создание корзины",
+      "item": [
+        {
+          "name": "200 Создание корзины",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"productsList\": [\r\n        {\r\n            \"id\": 7,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"quantity\": 3\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/api/v1/orders",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Проверка количества товаров на складах",
+      "item": [
+        {
+          "name": "200 Проверка количества товаров на складах",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"ids\": [\r\n        1,\r\n        3,\r\n        5,\r\n        7\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URL_Яндекс Прилавок}}/api/v1/warehouses/amount",
+              "host": [
+                "{{URL_Яндекс Прилавок}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "warehouses",
+                "amount"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "URL_Яндекс Прилавок",
+      "value": "",
+      "description": "Динамический URL. Генерируется при каждом запуске тестового окружения. Указанное значение уже не актуально."
+    }
+  ]
+}

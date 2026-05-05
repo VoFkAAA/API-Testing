@@ -1,0 +1,17 @@
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Логи
+*.log
+
+# Секреты и окружения
+.env
+*.local.json
+
+# Автотесты на JS/TS
+node_modules/
